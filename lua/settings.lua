@@ -1,54 +1,55 @@
-vim.opt.number = true     -- show line number
-vim.opt.showmode = false  -- disable mode(because of Vim-Airline)
-vim.opt.list = false      -- do not display invisible chars
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.cursorline = true
+local opt = vim.opt
+opt.number = true     -- show line number
+opt.showmode = false  -- disable mode(because of Vim-Airline)
+opt.list = false      -- do not display invisible chars
+opt.wrap = true
+opt.linebreak = true
+opt.cursorline = true
 
 -- vim.opt.compatible = false
-vim.opt.clipboard = "unnamed"
-vim.opt.bomb = false
-vim.opt.mouse = "a"
+opt.clipboard = "unnamed"
+opt.bomb = false
+opt.mouse = "a"
 
-vim.opt.termguicolors = true
+opt.termguicolors = true
 
-vim.opt.showtabline = 2
-vim.opt.shortmess = "I"     -- remove splash wording
-vim.opt.equalalways = true  -- split windows are equal size
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.smartindent = true
+opt.showtabline = 2
+opt.shortmess = "I"     -- remove splash wording
+opt.equalalways = true  -- split windows are equal size
+opt.swapfile = false
+opt.backup = false
+opt.smartindent = true
 
 ------------------
 -- search
 ------------------
-vim.opt.hlsearch = true
-vim.opt.ignorecase = true
-vim.opt.incsearch = true
-vim.opt.smartcase = true
+opt.hlsearch = true
+opt.ignorecase = true
+opt.incsearch = true
+opt.smartcase = true
 
 ------------------
 -- split window
 ------------------
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+opt.splitbelow = true
+opt.splitright = true
 
 ------------------
 -- Scroll
 ------------------
-vim.opt.scrolloff = 3
+opt.scrolloff = 3
 
 ------------------
 -- Tab and space
 ------------------
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 
 ------------------
 -- Sound
 -- disable sound when errors
 ------------------
-vim.opt.visualbell = true
-vim.opt.errorbells = false
-vim.opt.tm = 500
+opt.visualbell = true
+opt.errorbells = false
+opt.tm = 500
