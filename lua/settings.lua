@@ -11,8 +11,6 @@ opt.clipboard = "unnamed"
 opt.bomb = false
 opt.mouse = "a"
 
-opt.termguicolors = true
-
 opt.showtabline = 2
 opt.shortmess = "I"     -- remove splash wording
 opt.equalalways = true  -- split windows are equal size
@@ -53,3 +51,7 @@ opt.expandtab = true
 opt.visualbell = true
 opt.errorbells = false
 opt.tm = 500
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+opt.termguicolors = true

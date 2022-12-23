@@ -1,13 +1,14 @@
-local M = {}
+local T = {}
 
-M.project_files = function()
+T.project_files = function()
   local opts = {}
+  local builtin = require('telescope.builtin')
   vim.fn.system('git rev-parse --is-inside-work-tree')
   if vim.v.shell_error == 0 then
-    require"telescope.builtin".git_files(opts)
+    builtin.git_files(opts)
   else
-    require"telescope.builtin".find_files(opts)
+    builtin.find_files(opts)
   end
 end
 
-return M
+return T

@@ -37,5 +37,40 @@ require('packer').startup(function()
   -- Appearance
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-end)
 
+  -- Development
+  use 'tpope/vim-rails'
+  use {
+    'akinsho/toggleterm.nvim',
+    tag = '*',
+    config = function()
+      require("toggleterm").setup()
+    end
+  }
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    config = function()
+      require("nvim-tree").setup({
+        sort_by = "name",
+        view = {
+          width = 23,
+          mappings = {
+            list = {
+              { key = "u", action = "dir_up" },
+            },
+          },
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = true,
+        },
+      })
+    end
+  }
+end)
