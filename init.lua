@@ -1,3 +1,3 @@
-require("config.settings")
-require("plugins")
-require("keyremap")
+require "config.settings"
+require "plugins"
+require "keyremap"
