@@ -1,16 +1,9 @@
-local use = require('packer').use
+local colorscheme = 'onedark'
+local ok, theme = pcall(require, colorscheme)
 
-use {
-  'navarasu/onedark.nvim',
-  config = function()
-    require('onedark').setup { style = 'darker' }
-    require('onedark').load()
-  end
-}
+if not ok then
+  vim.notify("OOPS! colorscheme " .. colorscheme .. " is not installed.")
+  return
+end
 
-use {
-  'projekt0n/github-nvim-theme',
-  config = function()
-    require('github-theme').setup()
-  end
-}
+theme.load()

@@ -1,13 +1,5 @@
 local use = require('packer').use
 
-use 'tpope/vim-rails'
-
-use {
-  'nvim-telescope/telescope.nvim',
-  tag = '0.1.0',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
-
 -- Development
 use {
   'akinsho/toggleterm.nvim',
