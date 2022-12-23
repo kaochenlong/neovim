@@ -4,28 +4,10 @@ require('packer').startup(function()
   -- Package Manager
   use 'wbthomason/packer.nvim'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use {
-    'williamboman/mason.nvim', config = function()
-      require("mason").setup()
-    end
-  }
-
-  -- Color Theme
-  use {
-    'navarasu/onedark.nvim',
-    config = function()
-      require('onedark').setup { style = 'darker' }
-      require('onedark').load()
-    end
-  }
-  use {
-    'projekt0n/github-nvim-theme',
-    config = function()
-      require('github-theme').setup()
-    end
-  }
+  require("plugins.dev_tools")
+  require("plugins.lsp")
+  require("plugins.color_themes")
+  require("plugins.appearance")
 
   -- File Finder
   use {
@@ -34,18 +16,16 @@ require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Appearance
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
-
   -- Development
-  use 'tpope/vim-rails'
   use {
     'akinsho/toggleterm.nvim',
     tag = '*',
     config = function()
       require("toggleterm").setup()
     end
+  }
+  require("toggleterm").setup{
+    open_mapping = [[<C-\>]],
   }
 
   use {

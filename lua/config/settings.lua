@@ -1,18 +1,20 @@
 local opt = vim.opt
+local g = vim.g
+
 opt.number = true     -- show line number
 opt.showmode = false  -- disable mode(because of Vim-Airline)
 opt.list = false      -- do not display invisible chars
 opt.wrap = true
 opt.linebreak = true
 opt.cursorline = true
+opt.termguicolors = true
 
--- vim.opt.compatible = false
 opt.clipboard = "unnamed"
 opt.bomb = false
 opt.mouse = "a"
 
 opt.showtabline = 2
-opt.shortmess = "I"     -- remove splash wording
+opt.shortmess = "IT"    -- remove splash wording and truncate messages
 opt.equalalways = true  -- split windows are equal size
 opt.swapfile = false
 opt.backup = false
@@ -33,12 +35,12 @@ opt.splitbelow = true
 opt.splitright = true
 
 ------------------
--- Scroll
+-- scroll
 ------------------
 opt.scrolloff = 3
 
 ------------------
--- Tab and space
+-- tab and space
 ------------------
 opt.softtabstop = 2
 opt.shiftwidth = 2
@@ -52,6 +54,5 @@ opt.visualbell = true
 opt.errorbells = false
 opt.tm = 500
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-opt.termguicolors = true
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
