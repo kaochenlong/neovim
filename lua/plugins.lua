@@ -50,6 +50,8 @@ packer.startup({
       config = [[require 'config.utils.autopairs']]
     }
 
+    use 'tpope/vim-rails'
+
     -- color themes
     use {
       'navarasu/onedark.nvim',
