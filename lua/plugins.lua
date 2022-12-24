@@ -16,17 +16,18 @@ local packer_config = {
 packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
+    use 'neovim/nvim-lspconfig'
+
+    use {
+      'williamboman/mason.nvim',
+      config = [[require 'config.dev.mason']]
+    }
+    use 'williamboman/mason-lspconfig.nvim'
 
     use {
       'nvim-telescope/telescope.nvim',
       tag = '0.1.0',
       requires = { {'nvim-lua/plenary.nvim'} }
-    }
-
-    use 'neovim/nvim-lspconfig'
-    use {
-      'williamboman/mason.nvim',
-      config = [[require 'config.dev.mason']]
     }
 
     use {
@@ -52,7 +53,6 @@ packer.startup({
 
     use 'tpope/vim-rails'
 
-    -- color themes
     use {
       'navarasu/onedark.nvim',
       config = [[require 'config.themes.onedark']]
@@ -62,7 +62,6 @@ packer.startup({
       config = [[require 'config.themes.github']]
     }
 
-    -- appearances
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
