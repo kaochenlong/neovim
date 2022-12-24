@@ -1,8 +1,3 @@
 require "config.settings"
 require "plugins"
-require "config.color_themes"
-require "config.toggleterm"
-require "config.nvim_tree"
-require "config.lualine"
-require "config.lsp"
 require "config.keyremap"
