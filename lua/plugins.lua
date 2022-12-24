@@ -16,8 +16,13 @@ local packer_config = {
 packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-lua/plenary.nvim'
+
+    use {
+      'nvim-telescope/telescope.nvim',
+      tag = '0.1.0',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
     use 'neovim/nvim-lspconfig'
     use {
       'williamboman/mason.nvim',
@@ -40,11 +45,20 @@ packer.startup({
       config = [[require 'config.utils.comment']]
     }
 
+    use {
+      'windwp/nvim-autopairs',
+      config = [[require 'config.utils.autopairs']]
+    }
+
     -- color themes
-    use { 'navarasu/onedark.nvim', config = [[require 'config.themes.onedark']] }
-    use { 'projekt0n/github-nvim-theme', config = function()
-      require('github-theme').setup()
-    end }
+    use {
+      'navarasu/onedark.nvim',
+      config = [[require 'config.themes.onedark']]
+    }
+    use {
+      'projekt0n/github-nvim-theme',
+      config = [[require 'config.themes.github']]
+    }
 
     -- appearances
     use {
