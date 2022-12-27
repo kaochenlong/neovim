@@ -18,6 +18,7 @@ packer.startup({
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
     use 'vimwiki/vimwiki'
+    use 'mattn/emmet-vim'
 
     use {
       'williamboman/mason.nvim',

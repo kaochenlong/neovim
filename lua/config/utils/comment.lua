@@ -19,3 +19,4 @@ require('nvim_comment').setup{
 
 vim.keymap.set("n", "<C-/>", ":CommentToggle<Enter>")
 vim.keymap.set("v", "<C-/>", ":CommentToggle<Enter>")
+
