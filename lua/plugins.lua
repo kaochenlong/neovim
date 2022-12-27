@@ -17,6 +17,7 @@ packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
+    use 'vimwiki/vimwiki'
 
     use {
       'williamboman/mason.nvim',
