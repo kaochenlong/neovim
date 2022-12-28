@@ -19,6 +19,7 @@ packer.startup({
     use 'neovim/nvim-lspconfig'
     use 'vimwiki/vimwiki'
     use 'mattn/emmet-vim'
+    use 'tveskag/nvim-blame-line'
 
     use {
       'williamboman/mason.nvim',

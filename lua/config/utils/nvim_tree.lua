@@ -17,5 +17,6 @@ require("nvim-tree").setup({
 })
 
 -- nvim-tree
+local opts = { silent = true }
 vim.keymap.set('n', '<F2>', ':NvimTreeToggle<Enter>', opts)
 
