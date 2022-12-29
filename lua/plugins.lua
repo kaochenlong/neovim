@@ -20,6 +20,12 @@ packer.startup({
     use 'vimwiki/vimwiki'
     use 'mattn/emmet-vim'
     use 'tveskag/nvim-blame-line'
+    use {
+      'akinsho/bufferline.nvim', 
+      tag = "v3.*", 
+      requires = 'nvim-tree/nvim-web-devicons', 
+      config = [[require 'config.utils.bufferline']]
+    }
 
     use {
       'williamboman/mason.nvim',
