@@ -76,6 +76,12 @@ packer.startup({
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
       config = [[require 'config.utils.lualine']]
     }
+
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate', 
+      config = [[require 'config.dev.treesitter']]
+    }
   end,
   config = packer_config
 })
