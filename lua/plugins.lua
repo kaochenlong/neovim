@@ -20,6 +20,7 @@ packer.startup({
     use 'vimwiki/vimwiki'
     use 'mattn/emmet-vim'
     use 'tveskag/nvim-blame-line'
+    use 'terryma/vim-multiple-cursors'
     use {
       'akinsho/bufferline.nvim', 
       tag = "v3.*", 
