@@ -21,9 +21,14 @@ packer.startup({
     use 'mattn/emmet-vim'
     use 'tveskag/nvim-blame-line'
     use 'terryma/vim-multiple-cursors'
+    use { 
+      'kylechui/nvim-surround', 
+      tag = '*', 
+      config = [[require 'config.utils.nvim-surround']]
+    }
     use {
       'akinsho/bufferline.nvim', 
-      tag = "v3.*", 
+      tag = 'v3.*', 
       requires = 'nvim-tree/nvim-web-devicons', 
       config = [[require 'config.utils.bufferline']]
     }
